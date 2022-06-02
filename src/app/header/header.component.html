@@ -1,0 +1,195 @@
+<div class="container">
+  <nav class="nav-wrapper">
+    <span class="logo" routerLink="home"><img src="..\assets\Logo.svg" /></span>
+    <ul class="nav">
+      <li class="nav-item">
+        <div class="dropdown">
+          <button
+            class="dropdown-catalog"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            data-bs-autoClose="true"
+            aria-expanded="false"
+            routerLink="catalog"
+          >
+            Каталог
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" routerLink="catalog/creamy">Сливочное</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="catalog/fruity">Фруктовое</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="catalog/chocolate"
+                >Шоколадное</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="catalog/sorbet">Сорбет</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="delivery">Доставка и оплата</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">О компании</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="buttons-wrapper">
+    <ul class="buttons-list">
+      <li>
+        <span class="phone-number">+7 800 555-86-28</span>
+      </li>
+      <li>
+        <button class="search-botton button-header">
+          <i class="bi bi-search"></i>
+        </button>
+      </li>
+      <li *ngIf="signInButton">
+        <button
+          type="button"
+          class="login-button button-header"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <i class="bi bi-box-arrow-in-right"></i>
+          Вход
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+          [attr.data-bs-dismiss]="modal"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="form-header">Личный кабинет</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="signin-form">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      class="signin-input"
+                      name="test1"
+                      aria-describedby="emailHelp"
+                      [(ngModel)]="email" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="signin-input" name="test" [(ngModel)]="password" />
+                  </div>
+                  <div class="button-signin-wrapper">
+                    <button type="submit" class="additional-button" 
+                    
+                    (click)="signIn(email,password)"
+                     >
+                      Войти
+                    </button>
+                    <div class="link-singin-group">
+                      <a href="#" class="link-group">Забыли пароль?</a>
+                      <a class="link-group" 
+                      data-bs-target="#exampleModalToggle2" 
+                      data-bs-toggle="modal">Регистрация
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" [(ngModel)]='newUser.email' name="email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" [(ngModel)]="newUser.password" name="password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input class="form-control" [(ngModel)]="newUser.firstName" name="firstName">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Lastname" class="form-label">Lastname</label>
+                    <input class="form-control" [(ngModel)]="newUser.lastName" name="lastName">
+                  </div> 
+                  <button type="submit" class="additional-button" (click)="addUser()">Зарегистрироваться</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </li>
+      <li *ngIf="accountButton">
+        <button
+        type="button"
+        class="login-button button-header"
+        routerLink="account"
+      >
+      <i class="bi bi-person"></i> <span>ЛК</span>
+      </button>
+      </li>
+      <li>
+        <button class="cart-button button-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="bi bi-cart"></i>
+          <span>Пусто</span>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="getCartProducts()">
+              </button>
+              <div class="modal-body" *ngIf="cartEmpty">
+                Ваша корзина пуста
+              </div>
+              <div class ="modal-body" *ngIf="cartNotEmpty">
+                <ul>
+                  <li *ngFor="let product of productsCartList">
+                    <!-- <img [src]="product.productImg" alt=""> -->
+                    {{ product.productTitle }}
+                    {{ product.productPrice }}
+                  </li>
+                  Итого: {{ totalPrice }}
+                </ul>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

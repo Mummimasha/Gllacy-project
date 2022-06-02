@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <h1>Личный кабинет</h1>
+  <ul class="item-list">
+    <h3>hi {{ currentUser.firstName }}</h3>
+    <li>
+      <label for="userName"></label>
+      <input
+        type="text"
+        id="userName"
+        placeholder="name"
+        [(ngModel)]="newUserData.firstName"
+      />
+    </li>
+    <li>
+      <label for="userSurname"></label>
+      <input
+        type="text"
+        id="userSurname"
+        placeholder="last name"
+        [(ngModel)]="newUserData.lastName"
+      />
+    </li>
+    <li>
+      <label for="userPhone"></label>
+      <input
+        type="text"
+        name="userPhone"
+        id="userPhone"
+        placeholder="phone"
+        [(ngModel)]="newUserData.phone"
+      />
+    </li>
+    <li>
+      <label for="userEmail"></label>
+      <input
+        type="text"
+        id="userEmail"
+        placeholder="email"
+        [(ngModel)]="newUserData.email"
+      />
+    </li>
+    <li><span>user address</span></li>
+  </ul>
+  <button class="main-button" (click)="updateUser()">Изменить данные</button>
+</div>

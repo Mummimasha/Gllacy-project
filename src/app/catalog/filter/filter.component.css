@@ -1,0 +1,194 @@
+.sort-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+.form-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.form {
+  background: #fcfcfc4e;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.select {
+  background: #fcfcfc00;
+  border: none;
+}
+.select:active {
+  border: none;
+}
+.range-wrapper {
+  position: relative;
+  width: 164px;
+}
+.slider-wrapper {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+} 
+
+.slider-track{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #000;
+  margin: auto;
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  height: 3px;
+}
+input[type="range"]::-moz-range-track{
+  -moz-appearance: none;
+  height: 3px;
+}
+input[type="range"]::-ms-track{
+  appearance: none;
+  height: 3px;
+}
+input[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/icons/slider-circle.svg);
+  pointer-events: auto;
+  cursor: pointer;
+  
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/icons/slider-circle.svg);
+  pointer-events: auto;
+  margin-top: -6px;
+  cursor: pointer;
+}
+input[type="range"]::-ms-thumb{
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/icons/slider-circle.svg);
+  pointer-events: auto;
+  margin-top: -6px;
+  cursor: pointer;
+}
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-image: url(/assets/icons/slider-circle-hover.svg);
+}
+input[type="range"]:active::-webkit-slider-thumb {
+  background-image: url(/assets/icons/slider-circle-active.svg);
+}
+
+.form-check.form-check-inline{
+  margin: 0;
+  padding: 0;
+}
+.form-check-input{
+  display: none;
+}
+.form-check-label:before {
+  content: "";
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url(/assets/icons/Radio-off.svg);
+}
+.form-check-label:hover::before {
+  background-image: url(/assets/icons/Radio-off-hover.svg);
+}
+.form-check-input:checked + .form-check-label:before {
+  background-image: url(/assets/icons/Radio-on.svg);
+}
+.form-check-input:checked + .form-check-label:hover::before{
+  background-image: url(/assets/icons/Radio-on-hover.svg);
+}
+.radio-text{
+  margin-right: 16px;
+}
+.radio-text-last-child{
+  margin-right: 0;
+}
+.checkbox {
+  display: none;
+}
+.label-checkbox{
+  color: #000;
+  cursor: default;
+  font-weight: normal;
+  line-height: 30px;
+}
+.label-checkbox:before {
+  content: " ";
+  display: inline-block;
+  background-image: url(/assets/icons/check-off.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.label-checkbox:hover::before{
+  background-image: url(/assets/icons/check-off-hover.svg);
+}
+.checkbox:checked + .label-checkbox:before {
+  background-image: url(/assets/icons/check-on.svg);
+}
+.checkbox:checked + .label-checkbox:hover::before {
+  background-image: url(/assets/icons/check-on-hover.svg);
+}
+.checkbox-text {
+  margin-left: 8.5px;
+  margin-right: 16.5px;
+}
+.checkbox-text-ml{
+  margin-right: 24.7px;
+}
+.checkbox-text:last-child{
+  margin-right: 0;
+}
+.catalog-button {
+  width: 187px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 20px;
+  padding: 8px 32px;
+  align-self: flex-end;
+}
+.catalog-button:hover {
+  background: #FCFCFC;
+  border: 2px solid #FDC6D4;
+}
+.catalog-button:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+}
+.sort-wrapper-mb{
+  margin-bottom: 48px;
+}

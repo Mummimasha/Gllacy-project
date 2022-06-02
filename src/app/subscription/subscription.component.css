@@ -1,0 +1,41 @@
+.wrapper{
+    display: flex;
+    gap: 30px;
+    margin-top: 80px;
+}
+.news {
+    background-image: url(/assets/background/background.jpg);
+    background-repeat: no-repeat;
+    width: 570px;
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 16px;
+  }
+  .news-title {
+    max-width: 303px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .supscription-background {
+    padding: 6px;
+    width: 570px;
+    background-image: url(/assets/background/background-sub.jpg);
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+  .subscribe-form {
+    max-width: 558px;
+    background-color: #fcfcfc;
+    border-radius: 16px;
+    padding: 26px;
+  }
+  .subsribe-form-text {
+    margin-bottom: 34px;
+  }
+  .subscribe-input {
+    margin-right: 24px;
+    width: 310px;
+    height: 44px;
+  }

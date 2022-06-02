@@ -1,0 +1,28 @@
+<div *ngIf="notFound" class="alert alert-warning" role="alert">
+  Товаров по вашему запросу не найдено :(
+ </div>
+<div class="container-product">
+  <div class="product-card" *ngFor="let product of productList">
+    <div class="product-photo">   
+      <img
+        src="{{ product.productImg }}"
+        class="card-img-top"
+        alt="product-photo"
+      />
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="card-text">
+          <h5 class="card-title">{{ product.productTitle }}</h5>
+          <p class="card-description">
+            {{ product.productDescription }}
+          </p>
+        </div>
+        <div class="price-wrapper">
+          <span class="product-price">{{ product.productPrice }}</span>
+          <button class="cart-button additional-button"><i class="bi bi-cart "></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

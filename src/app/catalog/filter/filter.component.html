@@ -1,0 +1,104 @@
+<div class="sort-wrapper">
+    <div class="form-wrapper">
+        <span class="form-title">Сортировка:</span>
+        <div class="form">
+            <select class="select" name="select" #select (change)="sortByPopular(select.value)">
+                <option value="popular" selected>
+                  <label for="popular">
+                    по популярности
+                  </label>
+                </option>
+                <option value="highestPrice"> по возрастанию цены</option>
+                <option value="lowerPrice">по убыванию цены</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-wrapper">
+      <span class="form-title">Цена: 
+        <span id="range1">
+          {{ currentPriceMin }}
+        </span> 
+        <span>₽ – </span>
+      <span id="range2">
+        {{ currentPriceMax }}
+      </span> ₽</span>
+      <div class="form"> 
+        <div class="range-wrapper">
+          <div class="slider-wrapper">
+            <div class="slider-track"></div>
+            <input type="range" min="0" max="500" value="300" step="50" class="slider-min" id="sliderMin" 
+            (onChange)="slideOne(currentPriceMin, currentPriceMax)" [(ngModel)]="currentPriceMin"/>
+            <input type="range" min="0" max="500" value="400" step="50" class="slider-max" id="sliderMax"
+            (onChange)="slideTwo()" [(ngModel)]="currentPriceMax" />
+          </div>
+        </div>
+    </div> 
+    </div>
+    <div class="form-wrapper">
+        <span class="form-title">Жирность:</span>
+        <div class="form">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="0" id="fat0" name="fat" #fat0 (change)="filterByFat(fat0.value)">
+                <label class="form-check-label" for="fat0">
+                  <span class="radio-text">
+                    0%
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="fat10" value="10" name="fat" #fat10 (change)="filterByFat(fat10.value)">
+                <label class="form-check-label" for="fat10">
+                  <span class="radio-text">
+                    до 10%
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="fat30" value="30" name="fat" #fat30 (change)="filterByFat(fat30.value)" checked>
+                <label class="form-check-label" for="fat30">
+                  <span class="radio-text">
+                    до 30%
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="fat31" value="31" name="fat" #fat31 (change)="filterByFat(fat31.value)">
+                <label class="form-check-label" for="fat31">
+                  <span class="radio-text-last-child">
+                    выше 30%
+                  </span>
+                </label>
+              </div>
+        </div>
+    </div> 
+  </div>
+  <div class="sort-wrapper sort-wrapper-mb">
+      <div class="form-wrapper">
+          <span class="form-title">
+            Наполнители:
+          </span>
+              <form class="form">
+                  <input class="checkbox" id="chocolate" type="checkbox" value="chocolate" #chocolate (change)="filterByFilter(chocolate.value, chocolate)">
+                  <label class="label-checkbox" for="chocolate"></label> 
+                  <span class="checkbox-text">шоколадные</span>
+                  <input class="checkbox" type="checkbox" id="sprinkles" value="sprinkles" #sprinkles (change)="filterByFilter(sprinkles.value, sprinkles)" >
+                  <label class="label-checkbox" for="sprinkles"></label> 
+                  <span class="checkbox-text checkbox-text-ml">сахарные посыпки</span>
+                  <input class="checkbox" type="checkbox" id="fruit" value="fruit" #fruit (change)="filterByFilter(fruit.value, fruit)">
+                  <label class="label-checkbox" for="fruit"></label> 
+                  <span class="checkbox-text">фрукты</span>
+                  <input class="checkbox" type="checkbox" id="syrup" value="syrup" #syrup (change)="filterByFilter(syrup.value, syrup)">
+                  <label class="label-checkbox" for="syrup"></label> 
+                  <span class="checkbox-text">сиропы</span>
+                  <input class="checkbox" type="checkbox" id="jam" value="jam" #jam (change)="filterByFilter(jam.value, jam)">
+                  <label class="label-checkbox" for="jam"></label> 
+                  <span class="checkbox-text">джемы</span>
+              </form>
+      </div>
+      <button class="catalog-button" (click)="filterByProducts()">
+          <span>
+            Применить
+          </span>
+      </button>   
+  </div>
+

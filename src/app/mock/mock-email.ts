@@ -1,0 +1,1 @@
+export let emails: Array<string> = []

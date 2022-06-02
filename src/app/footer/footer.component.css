@@ -1,0 +1,24 @@
+.footer-nav-wrapper {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: row;
+}
+.bi-heart-fill {
+  color: #2d3440;
+  width: 13.94px;
+  height: 12.15px;
+}
+.footer-menu {
+  max-width: 360px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.footer-nav-item {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #2d3440;
+}
+

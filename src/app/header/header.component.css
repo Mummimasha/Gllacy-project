@@ -1,0 +1,134 @@
+.nav-wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.logo {
+  margin-right: 2rem;
+}
+.nav-item::last-child {
+  margin-right: 0;
+}
+.nav-link {
+  text-decoration: none;
+  color: #2d3440;
+  padding: 0;
+  padding-top: 0.5em;
+  padding-right: 2em;
+}
+.nav-link:hover {
+  color: #565c66;
+}
+.dropdown-catalog {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #feafc3;
+  border-radius: 1.625rem;
+  border: none;
+  color: #2d3440;
+}
+.dropdown-catalog:hover {
+  background-color: #ff4a78;
+  border-radius: 1.625rem;
+  border: none;
+}
+.dropdown-catalog:active {
+  border: none;
+  border-radius: 1.625rem;
+}
+.button-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.buttons-list {
+  margin-top: 1.125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.phone-number {
+  font-weight: 700;
+  font-size: 16px;
+}
+ul.buttons-list li {
+  margin-right: 1rem;
+}
+ul.buttons-list li:last-child {
+  margin-right: 0;
+}
+.button-header {
+  background-color: rgba(252, 252, 252, 0.301);
+  height: 2rem;
+  width: 5.75rem;
+  border-radius: 1.625rem;
+  border: none;
+}
+.button-header:hover {
+  background-color: rgba(252, 252, 252, 0.486);
+}
+.button-header:active {
+  background-color: #fcfcfc;
+}
+.button-header:focus {
+  background-color: rgba(252, 252, 252, 0.486);
+  border: #2d3440 1px solid;
+}
+.search-botton {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.modal {
+  width: 421px;
+  margin-left: 818px;
+  margin-top: 40px;
+}
+.modal-header {
+  padding-top: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.modal-body {
+  padding-left: 48px;
+  padding-bottom: 52px;
+}
+.signin-form {
+  background: #fcfcfc;
+  border-radius: 4px;
+}
+.form-header {
+  font-weight: 700;
+  font-size: 24px;
+}
+.signin-input {
+  width: 324px;
+  height: 48px;
+}
+
+.mb-3 {
+  width: 324px;
+}
+.button-signin-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+}
+
+.link-singin-group {
+  margin-left: 23px;
+  display: flex;
+  flex-direction: column;
+}
+.link-group {
+  color: #2d3440;
+}
