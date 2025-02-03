@@ -27,11 +27,14 @@ export class CatalogComponent implements OnInit {
   constructor(private productService: ProductCardsService, private route: ActivatedRoute, private usersService: UsersService) { }
 
   ngOnInit(): void {
+    
     this.getProduts(); 
     this.getCategory();
     this.filterProducts();
     this.usersService.getCurrentUser();
+    console.log(this.products)
   }
+ 
   
   getCategory() {
    this.category = this.route.snapshot.data["category"];

@@ -12,6 +12,7 @@ export interface productItem {
   category: Array<string>;
   fat: number;
   filter: string;
+  popularity: number;
 }
 
 @Injectable({
@@ -33,6 +34,12 @@ export class ProductCardsService {
 
   getCartProducts() {
     return this.cartProducts;
+  }
+
+  getPopularProducts(): productItem[] {
+    let popularProductsList = PRODUCTCADRS.slice().sort((a,b) => a.popularity - b.popularity);
+    popularProductsList.length = 4;
+    return popularProductsList;
   }
 }
 

@@ -18,14 +18,17 @@ export class ProductCardComponent implements OnInit {
     productImg: '',
     category: [],
     fat: 0,
-    filter: ''
+    filter: '',
+    popularity: 0
   };
 
-  cartProductList: productItem[] = [];
+  cartProductsList: productItem[] = [];
+ 
 
   constructor(private productCardsService: ProductCardsService) {}
 
   ngOnInit(): void {
+    
 
   }
   
@@ -35,11 +38,12 @@ export class ProductCardComponent implements OnInit {
     } else {
       this.notFound = false;
     };
+    console.log(this.productList)
   }
    
  /* addToCart(product: productItem) :void{
-    this.cartProductList.push(product);
-    console.log(this.cartProductList);
-    this.productCardsService.setCartProducts(this.cartProductList);
+    this.cartProductsList.push(product);
+    console.log(this.cartProductsList);
+    this.productCardsService.setCartProducts(this.cartProductsList);
   } */
  }

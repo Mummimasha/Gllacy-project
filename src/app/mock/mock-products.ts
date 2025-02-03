@@ -10,6 +10,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['fruity', 'creamy'],
         fat: 30,
         filter: 'jam',
+        popularity: 100,
     },
     { 
         id: 2 ,        
@@ -20,6 +21,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy'],
         fat: 31,
         filter: 'chocolate',
+        popularity: 90,
     },
     { 
         id: 3 ,        
@@ -30,6 +32,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['fruity',],
         fat: 30,
         filter: 'jam',
+        popularity: 80,
     },
     { 
         id: 4 ,        
@@ -40,6 +43,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy'],
         fat: 10,
         filter: 'sprinkles',
+        popularity: 70,
     },
     { 
         id: 5 ,        
@@ -50,6 +54,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy', 'fruity'],
         fat: 30,
         filter: 'jam',
+        popularity: 60,
     },
     { 
         id: 6 ,        
@@ -60,6 +65,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy'],
         fat: 31,
         filter: 'fruit',
+        popularity: 60,
     },
     { 
         id: 7 ,        
@@ -70,6 +76,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['chocolate'],
         fat: 10,
         filter: 'chocolate',
+        popularity: 60,
     },
     { 
         id: 8 ,        
@@ -80,6 +87,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy', 'fruity'],
         fat: 30,
         filter: 'fruit',
+        popularity: 30,
     },
     { 
         id: 9 ,        
@@ -90,6 +98,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['sorbet'],
         fat: 0,
         filter: 'fruit',
+        popularity: 10,
     },
     { 
         id: 10 ,        
@@ -100,6 +109,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy',],
         fat: 10,
         filter: '',
+        popularity: 10,
     },
     { 
         id: 11 ,        
@@ -110,6 +120,7 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy'],
         fat: 31,
         filter: 'syrup',
+        popularity: 50,
     },
     { 
         id: 12 ,        
@@ -120,5 +131,6 @@ export const PRODUCTCADRS: Array<productItem> = [
         category: ['creamy'],
         fat: 30,
         filter: '',
+        popularity: 40,
     },
 ]

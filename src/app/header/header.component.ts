@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit {
     phone: '',
     password: ''
   };
+  
 
   constructor(private usersService: UsersService, private router: Router, private productsCardService: ProductCardsService) { }
 
@@ -91,6 +92,5 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/signin');
     };
   }
-
-   
+ 
 }

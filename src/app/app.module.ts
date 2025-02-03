@@ -14,6 +14,7 @@ import { ProductCardComponent } from './catalog/product-card/product-card.compon
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { FilterComponent } from './catalog/filter/filter.component';
 import { AccountComponent } from './account/account.component';
+import { PopularProductsComponent } from './popular-products/popular-products.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AccountComponent } from './account/account.component';
     SubscriptionComponent,
     FilterComponent,
     AccountComponent,
+    PopularProductsComponent,
   ],
   imports: [
     BrowserModule,

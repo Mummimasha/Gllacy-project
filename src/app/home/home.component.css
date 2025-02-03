@@ -1,3 +1,4 @@
+
 .first-screen-group {
   display: flex;
   flex-direction: row;
@@ -187,6 +188,7 @@
 }
 .feedback-background {
   background-image: url(/assets/background/feedback-bg.png);
+  background-repeat: no-repeat;
   padding-top: 64px;
   padding-left: 64px;
   padding-bottom: 64px;
@@ -204,4 +206,22 @@
 .feedback-text{
   max-width: 179px;
   margin-bottom: 12px;
+}
+
+.button-cls{
+  display: flex;
+  justify-content: flex-end;
+}
+.feedback-input { 
+  width: 442px;
+  height: 48px;
+  margin-bottom: 16px;
+  margin-left: 10px;
+}
+ .feedback-input-lg{
+  height: 149px;
+}
+.feedback-button-wrapper{
+  display: flex;
+  justify-content: flex-end;
 }

@@ -30,6 +30,7 @@ line-height: 24px;
 }
 .container {
   max-width: 1170px;
+  min-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -40,7 +41,7 @@ line-height: 24px;
   padding: 0;
 }
 .height-container{
-  min-height: 64vh;
+  min-height: 65vh;
 }
 .main-button {
   padding: 12px 32px;
@@ -77,12 +78,12 @@ line-height: 24px;
   padding-left: 32px;
   padding-right: 32px;
 }
-.additional-button:hover {
+.additional-button:hover{
   background: rgba(252, 252, 252, 0.3);
   border: 4px solid #ff2f64;
   color: #2d3440;
 }
-.additional-button:focus {
+.additional-button:focus{
   color: #fcfcfc;
   background-color: #ff2f64;
   border: 2px solid #2d3440;
@@ -101,20 +102,20 @@ line-height: 24px;
 .social-icon:hover{
   background-color: #2D3440;
 }
-input{
+input[type="text"]{
   border: 1px solid #b9b9b9;
   box-sizing: border-box;
   border-radius: 4px;
 }
-input:hover {
+input[type="text"]:hover {
   border: 1px solid #2D3440;
 }
-input:focus{
+input[type="text"]:focus{
   border: 2px solid #2D3440;
 }
-input:invalid{
+input[type="text"]:invalid{
   border: 1px solid #EA5454;
 }
-input:invalid:hover{
+input[type="text"]:invalid:hover{
   border: 2px solid #EA5454;
 }
